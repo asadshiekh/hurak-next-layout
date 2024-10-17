@@ -1,4 +1,3 @@
-// pages/cart.js
 "use client"
 import React, { useState } from 'react';
 
@@ -10,35 +9,36 @@ const Cart = () => {
   };
 
   return (
-    <div className="container mx-auto py-10">
-      <h2 className="text-xl font-semibold mb-6">1 Items in Cart</h2>
+    <div className="container mx-auto py-10 px-4">
+      <h2 className="text-xl font-semibold mb-6">1 Item in Cart</h2>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Cart Item Section */}
-        <div className="md:col-span-2 bg-white shadow-lg rounded-lg p-6">
-          <div className="flex items-center justify-between">
+        <div className="md:col-span-2 bg-white shadow-lg rounded-lg p-4 md:px-3 md:py-5">
+
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between">
             {/* Image */}
-            <div className="w-24 h-24">
+            <div className="w-full md:w-[150px]">
               <img
-                src="/images/cart-item-image.webp" // Replace with the actual image URL
+                src="https://hurak-training-uploads.s3.eu-west-2.amazonaws.com/uploads/courses-images/62a905f89916a_cscs%20cl.webp"
                 alt="Course Image"
-                className="object-cover rounded"
+                className="object-cover rounded w-full h-auto"
               />
             </div>
 
             {/* Product Description */}
-            <div className="flex-1 ml-6">
-              <h3 className="text-lg font-semibold">
+            <div className="flex-1 md:ml-4 mt-4 md:mt-0">
+              <h3 className="text-lg font-medium">
                 Level 1 Award In Health and Safety in a Construction Environment Course{' '}
-                <span className="bg-yellow-200 text-yellow-600 text-xs font-bold ml-2 py-1 px-2 rounded">Flexi</span>
+                <span className="bg-yellow-200 text-yellow-800 text-xs font-bold ml-2 py-1 px-2 rounded">Flexi</span>
               </h3>
-              <p className="text-sm text-gray-500 mt-1">Provided by Hurak Learning</p>
+              <p className="text-sm text-gray-500 mt-1"><span className='font-medium text-black'>Provided by</span> Hurak Learning</p>
               
               {/* Quantity and Remove */}
-              <div className="mt-4 flex items-center space-x-4">
+              <div className="mt-2 flex items-center space-x-2">
                 {/* Quantity Selector */}
                 <select
-                  className="border border-gray-300 rounded-lg p-1"
+                  className="border border-gray-300 rounded-lg px-2 py-1 text-[12px]"
                   value={quantity}
                   onChange={handleQuantityChange}
                 >
@@ -50,21 +50,77 @@ const Cart = () => {
                 </select>
 
                 {/* Confirm Quantity Button */}
-                <button className="bg-gray-200 text-gray-700 px-4 py-2 rounded">
+                <button className="bg-gray-200 text-gray-700 px-4 py-1 text-[12px]">
                   ✓
                 </button>
 
                 {/* Remove Button */}
-                <button className="text-blue-500">Remove</button>
+                <button className="text-blue-500 text-[14px]">Remove</button>
+              </div>
+            </div>
+
+
+            {/* Price Section */}
+            <div className="mt-4 md:mt-0 flex">
+              <span className='text-[12px] font-medium mr-1'>1x</span>
+              <p className="text-sm line-through text-red-500 mr-2">£249.99</p>
+              <p className="text-xl font-medium text-red-500">£149.99</p>
+            </div>
+          </div>
+
+          
+          <div className="flex flex-col md:flex-row  md:items-center md:justify-between mt-[40px]">
+            {/* Image */}
+            <div className="w-full md:w-[150px]">
+              <img
+                src="https://hurak-training-uploads.s3.eu-west-2.amazonaws.com/uploads/courses-images/62a905f89916a_cscs%20cl.webp"
+                alt="Course Image"
+                className="object-cover rounded w-full h-auto"
+              />
+            </div>
+
+            {/* Product Description */}
+            <div className="flex-1 md:ml-4 mt-4 md:mt-0">
+              <h3 className="text-lg font-medium">
+                Level 1 Award In Health and Safety in a Construction Environment Course{' '}
+                <span className="bg-yellow-200 text-yellow-800 text-xs font-bold ml-2 py-1 px-2 rounded">Flexi</span>
+              </h3>
+              <p className="text-sm text-gray-500 mt-1"><span className='font-medium text-black'>Provided by</span> Hurak Learning</p>
+              
+              {/* Quantity and Remove */}
+              <div className="mt-2 flex items-center space-x-2">
+                {/* Quantity Selector */}
+                <select
+                  className="border border-gray-300 rounded-lg px-2 py-1 text-[12px]"
+                  value={quantity}
+                  onChange={handleQuantityChange}
+                >
+                  {[...Array(10).keys()].map((num) => (
+                    <option key={num} value={num + 1}>
+                      {num + 1}
+                    </option>
+                  ))}
+                </select>
+
+                {/* Confirm Quantity Button */}
+                <button className="bg-gray-200 text-gray-700 px-4 py-1 text-[12px]">
+                  ✓
+                </button>
+
+                {/* Remove Button */}
+                <button className="text-blue-500 text-[14px]">Remove</button>
               </div>
             </div>
 
             {/* Price Section */}
-            <div className="text-right">
-              <p className="text-sm line-through text-gray-400">£249.99</p>
-              <p className="text-2xl font-semibold text-red-500">£149.99</p>
+            <div className="text-left md:text-right mt-4 md:mt-0 flex items-center">
+              <span className='text-[12px] font-medium mr-1'>1x</span>
+              <p className="text-sm line-through text-red-500 mr-2">£249.99</p>
+              <p className="text-xl font-medium text-red-500">£149.99</p>
             </div>
           </div>
+
+
         </div>
 
         {/* Price Summary Section */}
@@ -74,7 +130,7 @@ const Cart = () => {
             <span className="text-2xl font-bold">£149.99</span>
           </div>
           <div className="flex justify-between items-center mb-4">
-            <span className="text-gray-600">Subtotal :</span>
+            <span className="text-gray-600">Subtotal:</span>
             <span>£149.99</span>
           </div>
 
@@ -84,7 +140,7 @@ const Cart = () => {
           </button>
 
           {/* Coupon Code */}
-          <div className="flex space-x-2 mb-4">
+          <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
             <input
               type="text"
               placeholder="Enter Coupon"
@@ -100,9 +156,6 @@ const Cart = () => {
             <p className="text-sm text-gray-600">
               Pay 3 monthly interest-free payments with
             </p>
-            <button className="mt-2">
-              <img src="/images/klarna-logo.png" alt="Klarna" className="h-8 mx-auto" />
-            </button>
           </div>
         </div>
       </div>

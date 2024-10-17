@@ -5,28 +5,28 @@ import React from 'react';
 const relatedProducts = [
   {
     id: 1,
-    image: '/images/health-safety.webp', // Replace with your actual image paths
+    image: 'https://hurak-training-uploads.s3.eu-west-2.amazonaws.com/uploads/courses-images/642d5c4f4e72d_Asbestos1.webp', // Replace with your actual image paths
     title: 'Level 3 Health and Safety Training for Managers',
     provider: 'Hurak Learning',
     price: '£50',
   },
   {
     id: 2,
-    image: '/images/asbestos-awareness.webp',
+    image: 'https://hurak-training-uploads.s3.eu-west-2.amazonaws.com/uploads/courses-images/644fcf1abc7ab_62c2cd7d09337_istockphoto-619263856-612x612.webp',
     title: 'Asbestos Awareness (Category A)',
     provider: 'Hurak Learning',
     price: 'From £14.99',
   },
   {
     id: 3,
-    image: '/images/first-aid.webp',
+    image: 'https://hurak-training-uploads.s3.eu-west-2.amazonaws.com/uploads/courses-images/64834cd4e147d_istockphoto-1358194313-612x612.jpg',
     title: 'Emergency First Aid At Work Course',
     provider: '16 Course Providers',
     price: 'From £65',
   },
   {
     id: 4,
-    image: '/images/manual-handling.webp',
+    image: 'https://hurak-training-uploads.s3.eu-west-2.amazonaws.com/uploads/courses-images/66a3b1afda751_Health%20and%20Safety%20Training%20for%20Managers%20Level-3.webp',
     title: 'Manual Handling Training Course',
     provider: 'Hurak Learning',
     price: 'From £14.99',
@@ -35,14 +35,14 @@ const relatedProducts = [
 
 const UpsellingSection = () => {
   return (
-    <div className="container mx-auto py-10">
+    <div className="container mx-auto px-10 md:px-0 py-10">
       <h2 className="text-xl font-semibold mb-6">You might also like</h2>
       
       <div className="relative">
         {/* Left Arrow */}
-        <button className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow-lg hidden md:block">
+        {/* <button className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow-lg hidden md:block">
           &lt;
-        </button>
+        </button> */}
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
           {relatedProducts.map((product) => (
@@ -62,9 +62,9 @@ const UpsellingSection = () => {
         </div>
 
         {/* Right Arrow */}
-        <button className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow-lg hidden md:block">
+        {/* <button className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow-lg hidden md:block">
           &gt;
-        </button>
+        </button> */}
       </div>
     </div>
   );

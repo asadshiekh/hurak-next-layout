@@ -26,9 +26,10 @@ function Packages() {
 
             <div className="border-b border-gray-300 my-4"></div>
             <p className="text-sm text-black">You save £70</p>
-            <button className="bg-secondary w-full text-white px-6 py-2 mt-4 rounded-md hover:bg-red-600">
+            <Link href="/shop-cart" className="block bg-secondary w-full text-white px-6 py-2 mt-4 rounded-md hover:bg-red-600">
               Select
-            </button>
+            </Link>
+
           </div>
 
           <ul className="px-8 space-y-6 text-left">
@@ -96,9 +97,9 @@ function Packages() {
           </div>
 
           <div className="text-center my-4 px-8">
-            <button className="bg-secondary w-full text-white px-6 py-2 mt-4 rounded-md hover:bg-red-600">
+            <Link href="/shop-cart" className="block bg-secondary w-full text-white px-6 py-2 mt-4 rounded-md hover:bg-red-600">
               Select
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -120,9 +121,9 @@ function Packages() {
 
             <div className="border-b border-gray-300 my-4"></div>
             <p className="text-sm text-black">You save £70</p>
-            <button className="bg-secondary w-full text-white px-6 py-2 mt-4 rounded-md hover:bg-red-600">
+            <Link href="/shop-cart" className="block bg-secondary w-full text-white px-6 py-2 mt-4 rounded-md hover:bg-red-600">
               Select
-            </button>
+            </Link>
           </div>
 
           <ul className="px-8 space-y-6 text-left">
@@ -190,9 +191,9 @@ function Packages() {
           </div>
 
           <div className="text-center my-4 px-8">
-            <button className="bg-secondary w-full text-white px-6 py-2 mt-4 rounded-md hover:bg-red-600">
+            <Link href="/shop-cart" className="block bg-secondary w-full text-white px-6 py-2 mt-4 rounded-md hover:bg-red-600">
               Select
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -211,9 +212,9 @@ function Packages() {
 
             <div className="border-b border-gray-300 my-4"></div>
             <p className="text-sm text-black">You save £70</p>
-            <button className="bg-secondary w-full text-white px-6 py-2 mt-4 rounded-md hover:bg-red-600">
+            <Link href="/shop-cart" className="block bg-secondary w-full text-white px-6 py-2 mt-4 rounded-md hover:bg-red-600">
               Select
-            </button>
+            </Link>
           </div>
 
           <ul className="px-8 space-y-6 text-left">
@@ -281,9 +282,9 @@ function Packages() {
           </div>
 
           <div className="text-center my-4 px-8">
-            <button className="bg-secondary w-full text-white px-6 py-2 mt-4 rounded-md hover:bg-red-600">
+            <Link href="/shop-cart" className="block bg-secondary w-full text-white px-6 py-2 mt-4 rounded-md hover:bg-red-600">
               Select
-            </button>
+            </Link>
           </div>
         </div>
 
