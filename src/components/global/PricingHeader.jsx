@@ -1,9 +1,11 @@
 // components/PricingHeader.jsx
 import Image from 'next/image';
+import PricingHeaderSmallScreen from './PricingHeaderSmallScreen';
 
 const PricingHeader = () => {
   return (
-    <div className="bg-white py-6 px-4 border-b">
+    <>
+    <div className="bg-white py-6 px-4 border-b hidden md:block">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
         {/* Left: Logo and Course Title */}
         <div className="flex flex-col md:flex-row items-center space-x-0 md:space-x-4 space-y-2 md:space-y-0">
@@ -27,7 +29,13 @@ const PricingHeader = () => {
           </div>
         </div>
       </div>
+    
     </div>
+     
+     <div className="block md:hidden">
+      <PricingHeaderSmallScreen></PricingHeaderSmallScreen>
+    </div>
+   </>
   );
 };
 

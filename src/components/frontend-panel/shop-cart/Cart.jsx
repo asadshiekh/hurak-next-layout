@@ -16,109 +16,126 @@ const Cart = () => {
         {/* Cart Item Section */}
         <div className="md:col-span-2 bg-white shadow-lg rounded-lg p-4 md:px-3 md:py-5">
 
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-            {/* Image */}
-            <div className="w-full md:w-[150px]">
-              <img
-                src="https://hurak-training-uploads.s3.eu-west-2.amazonaws.com/uploads/courses-images/62a905f89916a_cscs%20cl.webp"
-                alt="Course Image"
-                className="object-cover rounded w-full h-auto"
-              />
-            </div>
+        <div class="list">
+            <div className="flex md:flex-row md:items-center md:justify-between">
+              {/* Image */}
+              <div className="w-[150px] md:w-[150px]">
+                <img
+                  src="https://hurak-training-uploads.s3.eu-west-2.amazonaws.com/uploads/courses-images/62a905f89916a_cscs%20cl.webp"
+                  alt="Course Image"
+                  className="object-cover rounded w-full h-auto"
+                />
+              </div>
 
-            {/* Product Description */}
-            <div className="flex-1 md:ml-4 mt-4 md:mt-0">
-              <h3 className="text-lg font-medium">
-                Level 1 Award In Health and Safety in a Construction Environment Course{' '}
-                <span className="bg-yellow-200 text-yellow-800 text-xs font-bold ml-2 py-1 px-2 rounded">Flexi</span>
-              </h3>
-              <p className="text-sm text-gray-500 mt-1"><span className='font-medium text-black'>Provided by</span> Hurak Learning</p>
-              
-              {/* Quantity and Remove */}
-              <div className="mt-2 flex items-center space-x-2">
-                {/* Quantity Selector */}
-                <select
-                  className="border border-gray-300 rounded-lg px-2 py-1 text-[12px]"
-                  value={quantity}
-                  onChange={handleQuantityChange}
-                >
-                  {[...Array(10).keys()].map((num) => (
-                    <option key={num} value={num + 1}>
-                      {num + 1}
-                    </option>
-                  ))}
-                </select>
+              {/* Product Description */}
+              <div className="flex-1 ml-4 mt-0 md:mt-0">
+                <h3 className="text-lg font-medium">
+                  Level 1 Award In Health and Safety in a Construction Environment Course{' '}
+                  <span className="bg-yellow-200 text-yellow-800 text-xs font-bold ml-2 py-1 px-2 rounded">Flexi</span>
+                </h3>
+                <p className="text-sm text-gray-500 mt-1"><span className='font-medium text-black'>Provided by</span> Hurak Learning</p>
+                
+                {/* Quantity and Remove */}
+                <div className="mt-2 flex items-center space-x-2">
+                  {/* Quantity Selector */}
+                  <select
+                    className="border border-gray-300 rounded-lg px-2 py-1 text-[12px]"
+                    value={quantity}
+                    onChange={handleQuantityChange}
+                  >
+                    {[...Array(10).keys()].map((num) => (
+                      <option key={num} value={num + 1}>
+                        {num + 1}
+                      </option>
+                    ))}
+                  </select>
 
-                {/* Confirm Quantity Button */}
-                <button className="bg-gray-200 text-gray-700 px-4 py-1 text-[12px]">
-                  ✓
-                </button>
+                  {/* Confirm Quantity Button */}
+                  <button className="bg-gray-200 text-gray-700 px-4 py-1 text-[12px]">
+                    ✓
+                  </button>
 
-                {/* Remove Button */}
-                <button className="text-blue-500 text-[14px]">Remove</button>
+                  {/* Remove Button */}
+                  <button className="text-blue-500 text-[14px]">Remove</button>
+                </div>
+              </div>
+
+
+              {/* Price Section */}
+              <div className="mt-4 md:mt-0  hidden md:flex items-center justify-end">
+                <span className='text-[12px] font-medium mr-1'>1x</span>
+                <p className="text-sm line-through text-red-500 mr-2">£249.99</p>
+                <p className="text-xl font-medium text-red-500">£149.99</p>
               </div>
             </div>
-
-
-            {/* Price Section */}
-            <div className="mt-4 md:mt-0 flex">
-              <span className='text-[12px] font-medium mr-1'>1x</span>
-              <p className="text-sm line-through text-red-500 mr-2">£249.99</p>
-              <p className="text-xl font-medium text-red-500">£149.99</p>
-            </div>
+            <div className="mt-4 md:mt-0 flex md:hidden items-center justify-end">
+                <span className='text-[12px] font-medium mr-1'>1x</span>
+                <p className="text-sm line-through text-red-500 mr-2">£249.99</p>
+                <p className="text-xl font-medium text-red-500">£149.99</p>
+              </div>
           </div>
 
+
+        
+          <div class="list mt-[30px]">
+            <div className="flex md:flex-row md:items-center md:justify-between">
+              {/* Image */}
+              <div className="w-[150px] md:w-[150px]">
+                <img
+                  src="https://hurak-training-uploads.s3.eu-west-2.amazonaws.com/uploads/courses-images/62a905f89916a_cscs%20cl.webp"
+                  alt="Course Image"
+                  className="object-cover rounded w-full h-auto"
+                />
+              </div>
+
+              {/* Product Description */}
+              <div className="flex-1 ml-4 mt-0 md:mt-0">
+                <h3 className="text-lg font-medium">
+                  Level 1 Award In Health and Safety in a Construction Environment Course{' '}
+                  <span className="bg-yellow-200 text-yellow-800 text-xs font-bold ml-2 py-1 px-2 rounded">Flexi</span>
+                </h3>
+                <p className="text-sm text-gray-500 mt-1"><span className='font-medium text-black'>Provided by</span> Hurak Learning</p>
+                
+                {/* Quantity and Remove */}
+                <div className="mt-2 flex items-center space-x-2">
+                  {/* Quantity Selector */}
+                  <select
+                    className="border border-gray-300 rounded-lg px-2 py-1 text-[12px]"
+                    value={quantity}
+                    onChange={handleQuantityChange}
+                  >
+                    {[...Array(10).keys()].map((num) => (
+                      <option key={num} value={num + 1}>
+                        {num + 1}
+                      </option>
+                    ))}
+                  </select>
+
+                  {/* Confirm Quantity Button */}
+                  <button className="bg-gray-200 text-gray-700 px-4 py-1 text-[12px]">
+                    ✓
+                  </button>
+
+                  {/* Remove Button */}
+                  <button className="text-blue-500 text-[14px]">Remove</button>
+                </div>
+              </div>
+
+
+              {/* Price Section */}
+              <div className="mt-4 md:mt-0  hidden md:flex items-center justify-end">
+                <span className='text-[12px] font-medium mr-1'>1x</span>
+                <p className="text-sm line-through text-red-500 mr-2">£249.99</p>
+                <p className="text-xl font-medium text-red-500">£149.99</p>
+              </div>
+            </div>
+            <div className="mt-4 md:mt-0 flex md:hidden items-center justify-end">
+                <span className='text-[12px] font-medium mr-1'>1x</span>
+                <p className="text-sm line-through text-red-500 mr-2">£249.99</p>
+                <p className="text-xl font-medium text-red-500">£149.99</p>
+              </div>
+          </div>
           
-          <div className="flex flex-col md:flex-row  md:items-center md:justify-between mt-[40px]">
-            {/* Image */}
-            <div className="w-full md:w-[150px]">
-              <img
-                src="https://hurak-training-uploads.s3.eu-west-2.amazonaws.com/uploads/courses-images/62a905f89916a_cscs%20cl.webp"
-                alt="Course Image"
-                className="object-cover rounded w-full h-auto"
-              />
-            </div>
-
-            {/* Product Description */}
-            <div className="flex-1 md:ml-4 mt-4 md:mt-0">
-              <h3 className="text-lg font-medium">
-                Level 1 Award In Health and Safety in a Construction Environment Course{' '}
-                <span className="bg-yellow-200 text-yellow-800 text-xs font-bold ml-2 py-1 px-2 rounded">Flexi</span>
-              </h3>
-              <p className="text-sm text-gray-500 mt-1"><span className='font-medium text-black'>Provided by</span> Hurak Learning</p>
-              
-              {/* Quantity and Remove */}
-              <div className="mt-2 flex items-center space-x-2">
-                {/* Quantity Selector */}
-                <select
-                  className="border border-gray-300 rounded-lg px-2 py-1 text-[12px]"
-                  value={quantity}
-                  onChange={handleQuantityChange}
-                >
-                  {[...Array(10).keys()].map((num) => (
-                    <option key={num} value={num + 1}>
-                      {num + 1}
-                    </option>
-                  ))}
-                </select>
-
-                {/* Confirm Quantity Button */}
-                <button className="bg-gray-200 text-gray-700 px-4 py-1 text-[12px]">
-                  ✓
-                </button>
-
-                {/* Remove Button */}
-                <button className="text-blue-500 text-[14px]">Remove</button>
-              </div>
-            </div>
-
-            {/* Price Section */}
-            <div className="text-left md:text-right mt-4 md:mt-0 flex items-center">
-              <span className='text-[12px] font-medium mr-1'>1x</span>
-              <p className="text-sm line-through text-red-500 mr-2">£249.99</p>
-              <p className="text-xl font-medium text-red-500">£149.99</p>
-            </div>
-          </div>
 
 
         </div>
